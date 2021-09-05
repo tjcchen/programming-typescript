@@ -22,3 +22,11 @@ let e = d === 123;           // boolean
 if (typeof d === 'number') {
   let g = d + 10;            // number
 }
+
+// 3.2.3 boolean
+let aa = true;               // boolean
+var bb = false;              // boolean
+const ccc = true;            // true
+let ddd: boolean = true;     // boolean
+let eee: true = true;        // true, correct
+// let fff: true = false;       // Error: Type false is not assignable to type true
