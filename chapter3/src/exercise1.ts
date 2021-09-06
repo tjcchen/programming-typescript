@@ -26,7 +26,17 @@ if (typeof d === 'number') {
 // 3.2.3 boolean
 let aa = true;               // boolean
 var bb = false;              // boolean
-const ccc = true;            // true
-let ddd: boolean = true;     // boolean
-let eee: true = true;        // true, correct
-// let fff: true = false;       // Error: Type false is not assignable to type true
+const cc = true;             // true
+let dd: boolean = true;      // boolean
+let ee: true = true;         // true, correct
+// let fff: true = false;    // Error: Type false is not assignable to type true
+
+
+// 3.2.4
+let aaa = 1234;              // number
+let bbb = Infinity * 0.10;   // number
+const ccc = 5678;            // 5678
+let ddd = aaa < bbb;         // boolean
+let eee: number = 100;       // number
+let fff: 26.218 = 26.218;    // 26.218
+// let ggg: 26.218 = 10;        // Error
