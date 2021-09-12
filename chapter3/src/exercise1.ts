@@ -42,12 +42,12 @@ let fff: 26.218 = 26.218;    // 26.218
 // let ggg: 26.218 = 10;        // Error
 
 
-// 3.2.5 bigint( 使用需看是否支持 )
-let aaaa = 1234n;            // bigint
+// 3.2.5 bigint( 使用需看是否支持, 并且需要ES2020 )
+let aaaa = 1234n;            // bigint, BigInt literals are not available when targeting lower than ES2020
 let bbbb = 5678n;            // 5678n
 let cccc = aaaa + bbbb;      // bigint
 let dddd = aaaa < 1235;      // bigint
-let eeee = 88.5n;            // Error: a bigint literal must be an integer
+// let eeee = 88.5n;            // Error: a bigint literal must be an integer
 let ffff: bigint = 100n;     // bigint
 let gggg: 100n = 100n;       // 100n
-let hhhh: bigint = 100;      // Error: Type '100' is not assignable to type 'bigint'
+// let hhhh: bigint = 100;      // Error: Type '100' is not assignable to type 'bigint'
