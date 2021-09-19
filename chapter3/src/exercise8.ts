@@ -48,3 +48,22 @@ console.log(intersection.name, intersection.barks, intersection.purrs, intersect
 // If we have a value that is a union type,
 // we can only access members that are common to all types in the union.
 // =====================================================================
+
+// Extra example
+interface Bird {
+  fly(): void;
+  layEggs(): void;
+}
+
+interface Fish {
+  swim(): void;
+  layEggs(): void;
+}
+
+declare function getSmallPet(): Fish | Bird;
+
+let pet = getSmallPet();
+pet.layEggs();
+
+// Only available in one of the two possible types
+// pet.swim();
