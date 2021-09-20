@@ -43,6 +43,22 @@ let intersection: CatAndDog = {
 // Domino true false true
 console.log(intersection.name, intersection.barks, intersection.purrs, intersection.wags);
 
+
+// Union VS Intersection
+// Union is more useful in most cases
+type Returns = string | null;
+
+function trueOrNull(isTrue: boolean): Returns {
+  if (isTrue) {
+    return 'true';
+  }
+  return null;
+}
+
+function aOrB(a: string, b: number): string | number {
+  return a || b;
+}
+
 // =====================================================================
 // [important]
 // If we have a value that is a union type,
