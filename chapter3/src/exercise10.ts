@@ -26,3 +26,14 @@ let moreTrainFares: ([number] | [number, number])[] = [
 ];
 
 console.log(trainFares[0], trainFares[1], trainFares[2]); // [ 3.75 ] [ 8.25, 7.7 ] [ 10.5 ]
+
+// (2) rest gramma supportative, eg: ...
+// at least one element in friends list
+let friends: [string, ...string[]] = ['Jackie', 'Sara', 'Tali', 'Chloe', 'Claire'];
+
+// different elements
+let list: [number, boolean, ...string[]] = [1, false, 'a', 'b', 'c'];
+
+console.log(friends, list); // [ 'Jackie', 'Sara', 'Tali', 'Chloe', 'Claire' ] [ 1, false, 'a', 'b', 'c' ]
+
+
