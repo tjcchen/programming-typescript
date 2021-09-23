@@ -57,6 +57,6 @@ const enum Dialect {
 }
 
 let aa = Dialect.French;    // valid key
-let bb = Dialect.English    // invalid key
-let cc = Dialect[0];        // invalid key. Error: A const enum number can only accessed using a string literal
-let dd = Dialect[6];        // invalid key. Error: A const enum number can only accessed using a string literal
+// let bb = Dialect.English    // invalid key
+// let cc = Dialect[0];        // invalid key. Error: A const enum number can only accessed using a string literal
+// let dd = Dialect[6];        // invalid key. Error: A const enum number can only accessed using a string literal
