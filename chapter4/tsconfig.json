@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    // lib: which lib api to use
+    "lib": ["es2015", "dom"],
+    // modules: which target module system it is, CommonJS, SystemJS, ES2015
+    "module": "commonjs",
+    // outDir: output directory
+    "outDir": "dist",
+    // sourceMap: whether to use sourceMap
+    "sourceMap": false,
+    // strict: strict mode check
+    "strict": true,
+    // target: target javascript version, including ES3, ES5, ES2015, ES2016
+    "target": "es5"
+  },
+  // include: which directory to find ts files
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
