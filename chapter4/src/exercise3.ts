@@ -23,3 +23,9 @@ function sumVariadicSafe(...numbers: number[]): number {
 }
 
 console.log(sumVariadicSafe(4, 5, 6));   // 15
+
+
+// (4) Console
+interface Console {
+  log(message?: any, ...optionalParams: any[]): void;
+}
