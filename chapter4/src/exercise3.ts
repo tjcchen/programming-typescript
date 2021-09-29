@@ -18,6 +18,7 @@ function sumVariadic(): number {
 // sumVariadic(1, 2, 4); // Error: this cannot work in ts environment
 
 // (3) correct way with rest params
+// a function can take at most 1 rest parameter, and it has to be the last parameter
 function sumVariadicSafe(...numbers: number[]): number {
   return numbers.reduce((total, n) => total + n, 0);
 }
