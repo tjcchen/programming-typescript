@@ -14,3 +14,16 @@ add.bind(null, 10, 20)();    // result is 30, bind does not invoke function dire
                              // we can invoke the new function with (), .call(), .bind()
 
 
+// 4.1.4 this
+// this is unlnerable is javascript
+let x = {
+  a() {
+    console.log(this);
+  }
+};
+
+x.a();  // { a: [Function: a] }, this is object x
+
+let a = x.a;
+a();    // undefined
+
