@@ -32,6 +32,5 @@ function fancyDate(this: Date) {
   return this.getDate()/this.getMonth()/this.getFullYear();
 }
 
-fancyDate(new Date);  // Error, expected value is '10/02/2021'
-
-fancyDate();          // Error: The 'this' context of type 'void' is not assignable to method's 'this' of type 'Date'
+// fancyDate(new Date);  // Error, but expected value is '10/02/2021'
+// fancyDate();          // Error: The 'this' context of type 'void' is not assignable to method's 'this' of type 'Date'
