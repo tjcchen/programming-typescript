@@ -1,6 +1,7 @@
 export {};
 
 // 4.1.5 Generator Function
+// (1)
 // 1. function* refers to generator function
 // 2. while(true) return value all the time
 // 3. yield a; would generate value while invoking next()
@@ -28,3 +29,17 @@ let value1 = 3;
 let value2 = 5;
 [value1, value2] = [value2, value1 + value2 + 10];
 console.log(value1, value2);  // 5 18
+
+
+// (2) IterableIterator<number>
+function* createNumbers(): IterableIterator<number> {
+  let n = 0;
+  while (1) {
+    yield n++;
+  }
+}
+
+let numbers = createNumbers();
+console.log(numbers.next());       // { value: 0, done: false }
+console.log(numbers.next());       // { value: 1, done: false }
+console.log(numbers.next().value); // 2
