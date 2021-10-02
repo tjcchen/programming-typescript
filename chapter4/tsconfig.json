@@ -11,9 +11,11 @@
     // strict: strict mode check
     "strict": true,
     // target: target javascript version, including ES3, ES5, ES2015, ES2016
-    "target": "es5",
+    "target": "es6",
     // strictBindCallApply: to safely use bind & call & apply
-    "strictBindCallApply": true
+    "strictBindCallApply": true,
+
+    "noImplicitThis": true,
   },
   // include: which directory to find ts files
   "include": [
