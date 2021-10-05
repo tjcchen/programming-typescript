@@ -40,6 +40,12 @@ let reserve1: Reserve1 = (
   toOrDestination: Date | string,
   destination?: string
 ) => {
+  if (toOrDestination instanceof Date && destination !== undefined) {
+    // reserve one-way ticket
+  } else if (typeof toOrDestination === 'string') {
+    // reserve round trip ticket
+  }
+
   return {
     from,
     toOrDestination,
