@@ -20,3 +20,15 @@ times(n => console.log(n), 4); // 0 1 2 3
 // };
 
 // times(f, 5);
+
+
+// 4.1.9 function type reloading
+// shorthand
+type Log = (message: string, userId?: string) => void;
+
+// fullhand( same effect as above )
+type Log2 = {
+  (message: string, userId?: string): void
+};
+
+// we use shorthand format usually, but the benefits of fullhand are many
