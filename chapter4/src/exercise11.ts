@@ -1,4 +1,5 @@
 // 4.1.9 function type reloading
+// (1)
 type CreateElement = {
   (tag: 'a'): HTMLAnchorElement
   (tag: 'canvas'): HTMLCanvasElement
@@ -9,20 +10,47 @@ type CreateElement = {
 // let createElement: CreateElement = (tag: 'a' | 'canvas' | 'table' | string): HTMLElement => {
 // };
 
-// let createElement: CreateElement = (tag: string): HTMLElement => {
+// const createElement: CreateElement = (tag: string): HTMLElement => {
 //   let divElmt = document.createElement(tag);
 //   return divElmt;
 // };
 
 
-// function reloading
-function createElement(tag: 'a'): HTMLAnchorElement
-function createElement(tag: 'canvas'): HTMLCanvasElement
-function createElement(tag: 'table'): HTMLTableElement 
-function createElement(tag: string): HTMLElement {
-  let htmlElement = document.createElement(tag);
-  return htmlElement;
-}
+// (2) [important] function reloading
+// function createElement(tag: 'a'): HTMLAnchorElement
+// function createElement(tag: 'canvas'): HTMLCanvasElement
+// function createElement(tag: 'table'): HTMLTableElement 
+// function createElement(tag: string): HTMLElement {
+//   let htmlElement = document.createElement(tag);
+//   return htmlElement;
+// }
 
-let aTag = createElement('a');
-console.log(aTag);
+// let aTag = createElement('a');
+// console.log(aTag);
+
+
+// (3) describe type functions and properties
+// function warnUser(warning) {
+//   if (warnUser.wasCalled) {
+//     return;
+//   }
+//   warnUser.wasCalled = true;
+//   alert(warning);
+// }
+// warnUser.wasCalled = false;
+
+type WarnUser = {
+  (warning: string): void
+  wasCalled: boolean
+};
+
+const warnUser: WarnUser = (warning: string) => {
+  if (warnUser.wasCalled) {
+    return;
+  }
+  warnUser.wasCalled = true;
+  alert(warning);
+};
+
+warnUser.wasCalled = false;
+warnUser('Hello TypeScript!');
