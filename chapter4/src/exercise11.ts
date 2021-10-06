@@ -10,6 +10,7 @@ type CreateElement = {
 // let createElement: CreateElement = (tag: 'a' | 'canvas' | 'table' | string): HTMLElement => {
 // };
 
+// Note: the return value needs to be compatible with HTMLAnchorElement, HTMLCanvasElement, HTMLTableElement, HTMLElement
 // const createElement: CreateElement = (tag: string): HTMLElement => {
 //   let divElmt = document.createElement(tag);
 //   return divElmt;
