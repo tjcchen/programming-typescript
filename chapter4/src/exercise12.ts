@@ -29,6 +29,7 @@ type FilterSpecified = {
 };
 
 // [perfect] working with generic
+// we declare generic type with alphabetic letter, like T, U, V, W etc
 type FilterGeneric = {
   <T>(array: T[], fn: (item: T) => boolean): T[]
 };
