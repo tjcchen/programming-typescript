@@ -40,3 +40,17 @@ let retStr = mapGeneric(
   _ => _.name.endsWith('e')
 );
 console.log(retStr);  // [ true, true, false ]
+
+
+// (4) TS library filter & map implementation
+interface Array<T> {
+  filter(
+    callbackfn: (value: T, index: number, array: T[]) => any,
+    thisArg?: any
+  ): T[]
+
+  map<U>(
+    callbackfn: (value: T, index: number, array: T[]) => U,
+    thisArg?: any
+  ): U[]
+}
