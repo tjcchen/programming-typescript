@@ -46,3 +46,23 @@ console.log(retVal3); // [ false, true, false ]
 //   ['a', 'b', 'c'],
 //   _ => _ === 'b'
 // );
+
+
+// (2)
+// let promise = new Promise(resolve => 
+//   resolve(45)  
+// );
+
+// // cannot infer
+// promise.then(result => result * 4);
+
+// works perfectly, we need to tell more info to TS,
+// need to specify the number type
+let promise1 = new Promise<number>(resolve =>
+  resolve(45)
+);
+
+promise1.then(result => {
+  let retVal6 = result * 4;
+  console.log(retVal6);  // 180
+});
