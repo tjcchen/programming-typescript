@@ -82,4 +82,26 @@ const retVal1 = arr4.find(x => x === 8);
 console.log(retVal1);  // undefined or 3
 
 
+// (6) Object.values()
+const depts = {
+  'logistic_dept': [1, 2, 3],
+  'hr_dept': [5, 8, 12],
+  'admin_dept': [5, 22, 32],
+  'trans_dept': [3, 64, 99],
+};
+
+let member = [...new Set(Object.values(depts).flat(Infinity))]; // [1,  2,  3,  5,  8, 12, 22, 32, 64, 99]
+console.log(member);
+
+
+// (7) retrieve optional object value
+const obj5 = {
+  name: 'russel'
+};
+const name2 = obj5 && obj5.name;
+console.log(name2); // russel or undefined
+
+const name3 = obj5?.name;
+console.log(name3); // // russel or undefined
+
 
