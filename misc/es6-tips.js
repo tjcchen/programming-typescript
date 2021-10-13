@@ -104,4 +104,58 @@ console.log(name2); // russel or undefined
 const name3 = obj5?.name;
 console.log(name3); // // russel or undefined
 
+// (8) dynamic object key
+let obj6 = {};
+let index = 1;
+obj6[`topic${index}`] = 'book1'
 
+console.log(obj6.topic1); // book1
+
+// (9) empty value
+// if(value !== null && value !== undefined && value !== ''){
+//   //...
+// }
+
+// if(value??'' !== ''){
+//   //...
+// }
+
+// (10) promise
+const fn1 = () =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(1);
+    }, 1000);
+  });
+};
+const fn2 = () =>{
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(2);
+    }, 1000);
+  });
+};
+
+const fn = async () =>{
+  const res1 = await fn1();
+  console.log(res1); // 1
+  const res2 = await fn2();
+  console.log(res2); // 2
+}
+
+fn();
+
+// parallel requesting with promise all, and promise race
+const fn3 = () =>{
+  Promise.all([fn1(), fn2()]).then(res =>{
+      console.log(res);// [1, 2]
+  }) 
+};
+const fn4 = () =>{
+  Promise.race([fn1(), fn2()]).then(res =>{
+      console.log(res);// 1
+  }) 
+};
+
+fn3();
+fn4();
