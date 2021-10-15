@@ -32,3 +32,12 @@ let bodyEvent: MyEventSpecified = {
   type: 'mouseout'
 };
 
+// (4) default generic value should always be put on last element
+type MyEvent2<
+  Type extends string,
+  Target extends HTMLElement = HTMLElement
+> = {
+  target: Target
+  type: Type,
+};
+
