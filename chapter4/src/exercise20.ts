@@ -1,3 +1,5 @@
+export default null; // Force module mode
+
 // 4.3 type-driven development
 // declare type signature first, then write implementation
 function map<T, U>(array: T[], fn: (item: T) => U): U[] {

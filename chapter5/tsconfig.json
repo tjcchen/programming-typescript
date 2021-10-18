@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // lib: which lib api to use
+    "lib": ["es2015", "dom"],
+    // modules: which target module system it is, CommonJS, SystemJS, ES2015
+    "module": "commonjs",
+    // outDir: output directory
+    "outDir": "dist",
+    // sourceMap: whether to use sourceMap
+    "sourceMap": false,
+    // strict: strict mode check
+    "strict": true,
+    // target: target javascript version, including ES3, ES5, ES2015, ES2016
+    "target": "es6",
+    // strictBindCallApply: to safely use bind & call & apply
+    "strictBindCallApply": true,
+
+    "noImplicitThis": true,
+
+    // open self-defined iterator before version ES2015
+    // NB: if we care about bundle size, we should disable downlevelIteration
+    "downlevelIteration": true
+  },
+  // include: which directory to find ts files
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
