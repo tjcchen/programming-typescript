@@ -17,6 +17,7 @@ console.log(retVal); // [ 'a', 'a', 'a' ]
 
 
 // (T4) Implement a small typesafe assertion library
+// array.every() function check if all the element satistify the condition check
 function is<T>(a: T, ...b: [T, ...T[]]): boolean {
   return b.every(_ => _ === a);
 }
@@ -28,4 +29,4 @@ is(true, false);
 is(42, 42);
 
 // Comparing two different types should give a compile-time error
-is(10, 'foo');
+// is(10, 'foo');
