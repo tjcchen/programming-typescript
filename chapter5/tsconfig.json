@@ -8,7 +8,7 @@
     "outDir": "dist",
     // sourceMap: whether to use sourceMap
     "sourceMap": false,
-    // strict: strict mode check
+    // strict: strict mode check, including strictNullChecks and strictPropertyInitialization
     "strict": true,
     // target: target javascript version, including ES3, ES5, ES2015, ES2016
     "target": "es6",
