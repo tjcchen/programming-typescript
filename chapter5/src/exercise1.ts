@@ -31,7 +31,9 @@ class Position {
   ) {}
 }
 
-class Piece {
+// abstract key word specify that current Class cannot be instantiated,
+// we can only instantiate it subclasses
+abstract class Piece {
   protected position: Position    // assign position to this
   constructor(
     private readonly color: Color,
@@ -41,6 +43,29 @@ class Piece {
     // uses file and rank to mark a position
     this.position = new Position(file, rank);
 
-    this.color = 'Black';
+    // this.color = color; // this is not necessary
+  }
+
+  getPosition() {
+    return this.position;
+  }
+
+  getColor() {
+    return this.color;
   }
 }
+
+class King extends Piece {}
+class Queen extends Piece {}
+class Biship extends Piece {}
+class Knight extends Piece {}
+class Rook extends Piece {}
+class Pawn extends Piece {}
+
+// not working
+// let piece = new Piece();
+
+// working, we can only instantiate abstract classes's subclass
+let king = new King('White', 'C', 4);
+console.log(king.getPosition()); // Position { file: 'C', Rank: 4 }
+console.log(king.getColor());    // White
