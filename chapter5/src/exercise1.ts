@@ -26,13 +26,13 @@ type Rank = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;                 // column
 
 class Position {
   constructor(
-    private file: File,
+    private file: File,           // assign file to this
     private Rank: Rank
   ) {}
 }
 
 class Piece {
-  protected position: Position
+  protected position: Position    // assign position to this
   constructor(
     private readonly color: Color,
     file: File,
@@ -40,6 +40,7 @@ class Piece {
   ) {
     // uses file and rank to mark a position
     this.position = new Position(file, rank);
+
+    this.color = 'Black';
   }
 }
-
