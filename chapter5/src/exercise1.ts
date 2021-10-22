@@ -53,6 +53,13 @@ abstract class Piece {
   getColor() {
     return this.color;
   }
+
+  moveTo(position: Position) {
+    this.position = position;
+  }
+
+  // if we define an abstract method, we have to implement it in its subclasses
+  // abstract canMoveTo(position: Position): boolean;
 }
 
 class King extends Piece {}
