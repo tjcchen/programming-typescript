@@ -20,6 +20,15 @@ export default null;
 // class Rook extends Piece {}
 // class Pawn extends Piece {}
 
+// Summary
+// 1. use extends key word to extend a class, eg: class King extend Piece {}
+// 2. class can be regular or abstract, and abstract class includes abstract method and abstract property
+// 3. we can make a method 'private', 'protected', or 'public', and methods include static method and instance method
+// 4. a class contains instance property, and its visiblity is private, protected, and public;
+// we can declare instance property either in class or in its constructor
+// 5. we can apply readonly to instance property
+// eg: constructor(private readonly color: Color) {}
+
 type Color = 'Black' | 'White';
 type File = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H'; // row
 type Rank = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;                 // column
