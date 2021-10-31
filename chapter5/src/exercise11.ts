@@ -1,6 +1,7 @@
 export default null;
 
 // 5.7 polymorphism
+// (1) class generic
 // Like function and type, class and interface also have a good support for generic
 class MyMap<K, V> {  // 1. declare the scope of K, V
   constructor(initialKey: K, initialValue: V) { // 2. cannot declare generic in constructor
@@ -23,4 +24,16 @@ class MyMap<K, V> {  // 1. declare the scope of K, V
     // ...
   }
 }
+
+// (2) interface generic
+interface MyMap<K, V> {
+  get(key: K): V
+  set(key: K, value: V): void
+}
+
+let a = new MyMap<string, number>('k', 1); // MyMap<string, number>
+let b = new MyMap('k', true);              // MyMap<string, boolean>, by inference
+
+a.get('k');
+b.set('k', false);
 
