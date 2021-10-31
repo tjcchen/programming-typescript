@@ -10,19 +10,20 @@ class MyMap<K, V> {  // 1. declare the scope of K, V
 
   get(key: K): V { // 3. we can use K, V in any place of class MyMap
     // ...
+    return Object.keys(key).length as unknown as V;
   }
 
   set(key: K, value: V): void {
     // ...
   }
 
-  merge<K1, V1>(map: MyMap<K1, V1>): MyMap<K | K1, V | V1> { // 4. we can redeclare K1, V1 if needed
-    // ...
-  }
+  // merge<K1, V1>(map: MyMap<K1, V1>): MyMap<K | K1, V | V1> { // 4. we can redeclare K1, V1 if needed
+  //   // ...
+  // }
 
-  static of<K, V>(k: K, v: V): MyMap<K, V> {  // 5. static methods cannot use access class generic, but it can declare by itself
-    // ...
-  }
+  // static of<K, V>(k: K, v: V): MyMap<K, V> {  // 5. static methods cannot use access class generic, but it can declare by itself
+  //   // ...
+  // }
 }
 
 // (2) interface generic
