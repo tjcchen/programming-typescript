@@ -19,7 +19,10 @@
 
     // open self-defined iterator before version ES2015
     // NB: if we care about bundle size, we should disable downlevelIteration
-    "downlevelIteration": true
+    "downlevelIteration": true,
+
+    // use decorator, eg: @serializable
+    "experimentalDecorators": true
   },
   // include: which directory to find ts files
   "include": [
