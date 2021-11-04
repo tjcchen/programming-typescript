@@ -4,4 +4,8 @@ namespace Network {
       return new Promise<T>(() => {});
     }
   }
+
+  export function request<T>(url: string): T | string {
+    return '';
+  }
 }
