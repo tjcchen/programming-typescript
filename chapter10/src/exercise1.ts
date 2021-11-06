@@ -11,3 +11,8 @@ namespace Flowers {
     return count + ' flowers';
   }
 }
+
+// Reasons not to use namespace, and use import and export instead
+// (1) more readable, segregate modules
+// (2) static analysis( eg: tree shaking, code spliting )
+// (3) use module in mode commonjs too instead of module
