@@ -22,7 +22,11 @@
     "downlevelIteration": true,
 
     // use decorator, eg: @serializable
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+
+    // always use node mode, in this mode, typescript uses the same module analysis algo with nodejs
+    // node | classic
+    "moduleResolution": "node"
   },
   // include: which directory to find ts files
   "include": [
