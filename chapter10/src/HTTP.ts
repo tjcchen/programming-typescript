@@ -5,7 +5,7 @@ namespace Network {
     }
   }
 
-  export function request<T>(url: string): T | string {
-    return '';
-  }
+  // export function request<T>(url: string): T | string {
+  //   return '';
+  // }
 }
